@@ -12,8 +12,7 @@
     <ul class="works__list">
       <li v-for="(work, i) in works" class="works__item" @click="changeWork(i)">
         <h2>{{ work.title }}</h2>
-        <!-- <p>{{ work.skills[0] }}</p> -->
-        <!-- <img :src="require(`@/assets/work.skils[0]`)"> -->
+        <img :src="require(`@/assets/${work.skills[0]}`)"> 
       </li>
     </ul>
   </div>
@@ -83,6 +82,10 @@ export default {
     width: 1200px;
     display: flex;
     justify-content: center;
+    img {
+        width: 250px;
+        height: 150px;
+      }
   }
   &__item {
     border: 1px solid #ddd;
