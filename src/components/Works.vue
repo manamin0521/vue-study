@@ -12,6 +12,8 @@
     <ul class="works__list">
       <li v-for="(work, i) in works" class="works__item" @click="changeWork(i)">
         <h2>{{ work.title }}</h2>
+        <!-- <p>{{ work.skills[0] }}</p> -->
+        <!-- <img :src="require(`@/assets/work.skils[0]`)"> -->
       </li>
     </ul>
   </div>
@@ -23,19 +25,19 @@ export default {
       workIndex: 0,
       works: [
         {
-          title: 'Work1',
-          description: 'HTMLとCSSを使って頑張った！',
-          skills: ['html5.png', 'css3.png']
+          title: 'My Favorite Music',
+          description: '好きな音楽を紹介できるプロフィールサービス。ログイン、投稿、編集、削除、セッションを切ったシェアページ等',
+          skills: ['mfm_1.png', 'mfm_2.png']
         },
         {
-          title: 'Work2',
-          description: 'HTMLとCSSとJavaScriptとjQueryを使って頑張った！',
-          skills: ['html5.png', 'css3.png', 'javascript.png', 'jquery.png']
+          title: 'シェアパレ',
+          description: '一人一人が別々の一パーツしか見えない状態で着色し、一枚の塗り絵を完成させるサービス。',
+          skills: ['share1.png', 'share2.png']
         },
         {
-          title: 'Work3',
-          description: 'HTMLとCSSとSassとVueを使って頑張った！',
-          skills: ['html5.png', 'css3.png', 'sass.png', 'vue.png']
+          title: 'ラーメン君の修行',
+          description: '南大沢地区のラーメン屋紹介をノベルゲーム風に',
+          skills: ['ramen1.png', 'ramen2.png']
         }
       ]
     }
@@ -58,7 +60,7 @@ export default {
   }
   &__description {
     margin: 0 auto 20px;
-    width: 300px;
+    width: 500px;
     text-align: center;
   }
   &__skill {
@@ -69,8 +71,8 @@ export default {
     &Item {
       margin: 0 5px;
       img {
-        width: 50px;
-        height: 50px;
+        width: 250px;
+        height: 150px;
       }
     }
   }
@@ -78,7 +80,7 @@ export default {
 .works {
   &__list {
     margin: 0 auto;
-    width: 500px;
+    width: 1200px;
     display: flex;
     justify-content: center;
   }
@@ -86,8 +88,8 @@ export default {
     border: 1px solid #ddd;
     text-align: center;
     margin: 0 10px;
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 300px;
     line-height: 100px;
     vertical-align: middle;
     float: left;
